@@ -55,12 +55,20 @@ jobs:
       - name: ¿Cambió el texto vigente?
         id: cambios
         run: |
-          if [ -n "$(git status --porcelain)" ]; then
+          # Una reforma = cambió el TEXTO LEGAL de los artículos. Miramos solo
+          # `articulos/` a propósito: cambios de metadata/esquema (p. ej. un campo
+          # nuevo en pasajes.jsonl) regeneran el árbol pero NO son una reforma y
+          # no deben abrir un PR de "reforma".
+          if [ -n "$(git status --porcelain -- articulos)" ]; then
             echo "hay_cambios=true" >> "$GITHUB_OUTPUT"
-            git status --short
+            git status --short -- articulos
           else
             echo "hay_cambios=false" >> "$GITHUB_OUTPUT"
-            echo "Sin cambios: el texto vigente coincide con el repo."
+            echo "Sin reforma: el texto de los artículos coincide con el repo."
+            if [ -n "$(git status --porcelain)" ]; then
+              echo "Nota: hay diffs solo de metadata/esquema (no reforma):"
+              git status --short
+            fi
           fi
 
       - name: Enriquecer artículos cambiados (opcional, best-effort)
