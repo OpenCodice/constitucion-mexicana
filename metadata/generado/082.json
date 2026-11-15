@@ -4,28 +4,33 @@
   "_generado": {
     "modelo": "openai:gpt-4o-mini",
     "schema": 1,
-    "hash_texto": "sha256:365724ef2cccc165",
+    "hash_texto": "sha256:e0e77ae3c0364a52",
     "advertencia": "Contenido generado por IA como AYUDA DE RECUPERACIÓN. No es texto oficial ni fuente de cita; la verdad está en el archivo de texto del artículo."
   },
   "denominacion_comun": "Requisitos para ser Presidente",
   "temas": [
     "ciudadanía",
+    "nacionalidad",
     "edad",
     "residencia",
-    "impedimentos"
+    "estado eclesiástico",
+    "servicio activo",
+    "vínculos familiares"
   ],
   "terminos_coloquiales": [
-    "qué se necesita para ser Presidente",
-    "requisitos para la candidatura presidencial",
-    "quién puede ser Presidente",
-    "condiciones para ser Presidente de México"
+    "qué se necesita para ser presidente",
+    "requisitos para el presidente",
+    "quién puede ser presidente",
+    "edad para ser presidente",
+    "nacionalidad del presidente",
+    "dónde vivir para ser presidente"
   ],
-  "resumen": "Para ser Presidente de México, debes ser ciudadano por nacimiento, tener al menos 35 años, vivir en el país durante el año previo a la elección y cumplir con ciertos impedimentos como no ser miembro del clero o estar en servicio activo en las fuerzas armadas. También hay restricciones sobre vínculos familiares con el actual Presidente.",
+  "resumen": "Este artículo establece los requisitos que debe cumplir una persona para ser Presidente de México. Incluye aspectos como la ciudadanía, la edad mínima, tiempo de residencia en el país y restricciones sobre vínculos familiares y nacionalidad.",
   "preguntas_ejemplo": [
-    "¿Cuáles son los requisitos para ser Presidente?",
-    "¿Qué edad se necesita para postularse a la presidencia?",
-    "¿Es necesario haber vivido en México para ser Presidente?",
-    "¿Quién no puede ser candidato a Presidente?",
-    "¿Cuáles son los impedimentos para ser Presidente?"
+    "¿Cuál es la edad mínima para ser presidente?",
+    "¿Puedo ser presidente si tengo otra nacionalidad?",
+    "¿Cuánto tiempo tengo que vivir en México para ser presidente?",
+    "¿Un ministro de culto puede ser presidente?",
+    "¿Qué requisitos tengo que cumplir para registrarme como candidato a la presidencia?"
   ]
 }
