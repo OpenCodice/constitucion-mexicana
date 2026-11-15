@@ -52,6 +52,26 @@ jobs:
           PYTHONPATH=/tmp/extractor python -m extractor build \
             --pdf /tmp/CPEUM.pdf --out "$GITHUB_WORKSPACE"
 
+      - name: Verificar la extracción contra el PDF (LLM) y autorreparar
+        id: verificar
+        if: env.OPENAI_API_KEY != ''
+        env:
+          VERIFICADOR_MODELO: ${{ vars.VERIFICADOR_MODELO }}
+        run: |
+          if [ -z "$(git status --porcelain -- articulos)" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          pip install openai
+          cd /tmp/extractor
+          if PYTHONPATH=/tmp/extractor python -m extractor verificar \
+               --pdf /tmp/CPEUM.pdf --out "$GITHUB_WORKSPACE" \
+               --reparar --reporte /tmp/verificacion.md; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: ¿Cambió el texto vigente?
         id: cambios
         run: |
@@ -59,7 +79,7 @@ jobs:
           # `articulos/` a propósito: cambios de metadata/esquema (p. ej. un campo
           # nuevo en pasajes.jsonl) regeneran el árbol pero NO son una reforma y
           # no deben abrir un PR de "reforma".
-          if [ -n "$(git status --porcelain -- articulos)" ]; then
+          if [ -n "$(git status --porcelain -- articulos fuente/ruido.json)" ]; then
             echo "hay_cambios=true" >> "$GITHUB_OUTPUT"
             git status --short -- articulos
           else
@@ -94,6 +114,9 @@ jobs:
         if: steps.cambios.outputs.hay_cambios == 'true'
         run: |
           python /tmp/extractor/scripts/pr_summary.py "$GITHUB_WORKSPACE" > /tmp/cuerpo.md
+          if [ -f /tmp/verificacion.md ]; then
+            { echo; cat /tmp/verificacion.md; } >> /tmp/cuerpo.md
+          fi
           cat /tmp/cuerpo.md
 
       - name: Abrir Pull Request
@@ -109,7 +132,9 @@ jobs:
           title: '🏛️ Posible reforma a la CPEUM (detección automática)'
           body-path: /tmp/cuerpo.md
           commit-message: 'Actualización automática del texto vigente de la CPEUM'
+          draft: ${{ steps.verificar.outputs.ok == 'false' }}
           labels: |
             reforma
             automatico
+            ${{ steps.verificar.outputs.ok == 'false' && 'extraccion-sospechosa' || '' }}
           delete-branch: true
