@@ -23,6 +23,7 @@ env:
   # Opcional: si defines el secret OPENAI_API_KEY, el Action también regenera el
   # enriquecimiento de los artículos cambiados (best-effort). Si no, se omite.
   OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+  TIENE_CLAUDE: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN != '' }}
 
 jobs:
   vigilar:
@@ -32,6 +33,7 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup Python
         uses: actions/setup-python@v6
@@ -52,9 +54,37 @@ jobs:
           PYTHONPATH=/tmp/extractor python -m extractor build \
             --pdf /tmp/CPEUM.pdf --out "$GITHUB_WORKSPACE"
 
-      - name: Verificar la extracción contra el PDF (LLM) y autorreparar
+      - name: Agente — verificar contra el PDF y reparar el extractor si hace falta
+        timeout-minutes: 90
+        if: env.TIENE_CLAUDE == 'true'
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          OPENAI_API_KEY: ''
+          PDF: /tmp/CPEUM.pdf
+          OUT: ${{ github.workspace }}
+          PERFIL: cpeum
+        run: bash /tmp/extractor/scripts/agente/correr.sh
+
+      - name: Compuertas del agente y veredicto
+        id: agente
+        if: env.TIENE_CLAUDE == 'true'
+        env:
+          EXTRACTOR_TOKEN: ${{ secrets.PR_TOKEN }}
+          EXTRACTOR_SLUG: OpenCodice/constitucion-extractor
+          REPORTE: /tmp/verificacion.md
+          PDF: /tmp/CPEUM.pdf
+          OUT: ${{ github.workspace }}
+          PERFIL: cpeum
+        run: |
+          if bash /tmp/extractor/scripts/agente/cerrar.sh; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Verificar la extracción contra el PDF (LLM, respaldo sin agente)
         id: verificar
-        if: env.OPENAI_API_KEY != ''
+        if: env.TIENE_CLAUDE != 'true' && env.OPENAI_API_KEY != ''
         env:
           VERIFICADOR_MODELO: ${{ vars.VERIFICADOR_MODELO }}
           VERIFICADOR_MODELO_FUERTE: ${{ vars.VERIFICADOR_MODELO_FUERTE }}
@@ -72,6 +102,10 @@ jobs:
           else
             echo "ok=false" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Veredicto de verificación
+        id: veredicto
+        run: echo "ok=${{ steps.agente.outputs.ok || steps.verificar.outputs.ok }}" >> "$GITHUB_OUTPUT"
 
       - name: ¿Cambió el texto vigente?
         id: cambios
@@ -134,13 +168,13 @@ jobs:
           title: '🏛️ Posible reforma a la CPEUM (detección automática)'
           body-path: /tmp/cuerpo.md
           commit-message: 'Actualización automática del texto vigente de la CPEUM'
-          draft: ${{ steps.verificar.outputs.ok == 'false' }}
+          draft: ${{ steps.veredicto.outputs.ok == 'false' }}
           labels: |
             reforma
             automatico
-            ${{ steps.verificar.outputs.ok == 'false' && 'extraccion-sospechosa' || '' }}
-            ${{ steps.verificar.outputs.ok == 'true' && 'verificado' || '' }}
-          assignees: ${{ steps.verificar.outputs.ok == 'false' && 'danielcardeenas' || '' }}
+            ${{ steps.veredicto.outputs.ok == 'false' && 'extraccion-sospechosa' || '' }}
+            ${{ steps.veredicto.outputs.ok == 'true' && 'verificado' || '' }}
+          assignees: ${{ steps.veredicto.outputs.ok == 'false' && 'danielcardeenas' || '' }}
           delete-branch: true
 
       - name: Sincronizar el estado de verificación del PR
@@ -148,7 +182,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.PR_TOKEN || github.token }}
           PR: ${{ steps.pr.outputs.pull-request-number }}
-          OK: ${{ steps.verificar.outputs.ok }}
+          OK: ${{ steps.veredicto.outputs.ok }}
         run: |
           if [ "$OK" = "true" ]; then
             gh pr edit "$PR" -R "$GITHUB_REPOSITORY" --remove-label extraccion-sospechosa || true
