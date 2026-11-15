@@ -32,11 +32,23 @@ jobs:
           git clone --depth 1 "$EXTRACTOR_REPO" /tmp/extractor
           pip install -r /tmp/extractor/requirements.txt
       - name: Validar invariantes (GATE)
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git fetch -q origin "${{ github.base_ref }}"
+          # Un PR verificado contra el PDF puede tocar cualquier número de
+          # artículos; el tope solo protege los que llegan sin verificar.
+          MAX=20
+          etiquetas=$(gh pr view "${{ github.event.pull_request.number }}" -R "$GITHUB_REPOSITORY" \
+            --json labels -q '[.labels[].name] | join(",")')
+          case "$etiquetas" in
+            *extraccion-sospechosa*) ;;
+            *verificado*) MAX=100000 ;;
+          esac
           cd /tmp/extractor
           PYTHONPATH=/tmp/extractor python -m extractor validar \
-            --out "$GITHUB_WORKSPACE" --base "origin/${{ github.base_ref }}"
+            --out "$GITHUB_WORKSPACE" --base "origin/${{ github.base_ref }}" \
+            --max-cambios "$MAX"
 
   resumir:
     runs-on: ubuntu-latest
@@ -97,5 +109,8 @@ jobs:
           fi
           ver=$(jq -r '.version // empty' metadata/articulos.json)
           asunto="Reforma CPEUM${ver:+ (DOF $ver)}: $arts"
+          declarado=$(gh pr view "$PR" -R "$GITHUB_REPOSITORY" --json body -q .body \
+            | sed -n 's/.*<!-- asunto: \(.*\) -->.*/\1/p' | head -n 1)
+          asunto="${declarado:-$asunto}"
           gh pr merge "$PR" -R "$GITHUB_REPOSITORY" --squash --delete-branch \
             --subject "$asunto" --body "Fusionado automáticamente: validación e inspección LLM contra el PDF oficial en verde (#$PR)."
