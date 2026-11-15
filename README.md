@@ -110,6 +110,10 @@ Cámara de Diputados, y cada reforma publicada en el DOF queda registrada como u
 commit. El proceso está automatizado, de modo que el repositorio sigue a la
 versión vigente de la Constitución conservando su historial completo de cambios.
 
+Antes de registrar un cambio, cada párrafo nuevo se compara contra el PDF. El
+título de cada commit distingue una **reforma** (cambió la ley) de una
+**corrección de extracción** (misma ley, mejor lectura del PDF).
+
 ## Fuente
 
 Diario Oficial de la Federación — CPEUM, H. Cámara de Diputados del H. Congreso

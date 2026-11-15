@@ -20,9 +20,6 @@ env:
   # Repo del extractor (código).
   EXTRACTOR_REPO: https://github.com/OpenCodice/constitucion-extractor.git
   PDF_URL: https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf
-  # Opcional: si defines el secret OPENAI_API_KEY, el Action también regenera el
-  # enriquecimiento de los artículos cambiados (best-effort). Si no, se omite.
-  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
   TIENE_CLAUDE: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN != '' }}
 
 jobs:
@@ -59,7 +56,6 @@ jobs:
         if: env.TIENE_CLAUDE == 'true'
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          OPENAI_API_KEY: ''
           PDF: /tmp/CPEUM.pdf
           OUT: ${{ github.workspace }}
           PERFIL: cpeum
@@ -82,30 +78,9 @@ jobs:
             echo "ok=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Verificar la extracción contra el PDF (LLM, respaldo sin agente)
-        id: verificar
-        if: env.TIENE_CLAUDE != 'true' && env.OPENAI_API_KEY != ''
-        env:
-          VERIFICADOR_MODELO: ${{ vars.VERIFICADOR_MODELO }}
-          VERIFICADOR_MODELO_FUERTE: ${{ vars.VERIFICADOR_MODELO_FUERTE }}
-        run: |
-          if [ -z "$(git status --porcelain -- articulos)" ]; then
-            echo "ok=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          pip install openai
-          cd /tmp/extractor
-          if PYTHONPATH=/tmp/extractor python -m extractor verificar \
-               --pdf /tmp/CPEUM.pdf --out "$GITHUB_WORKSPACE" \
-               --reparar --reporte /tmp/verificacion.md; then
-            echo "ok=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "ok=false" >> "$GITHUB_OUTPUT"
-          fi
-
       - name: Veredicto de verificación
         id: veredicto
-        run: echo "ok=${{ steps.agente.outputs.ok || steps.verificar.outputs.ok }}" >> "$GITHUB_OUTPUT"
+        run: echo "ok=${{ steps.agente.outputs.ok }}" >> "$GITHUB_OUTPUT"
 
       - name: ¿Cambió el texto vigente?
         id: cambios
