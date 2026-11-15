@@ -4,33 +4,33 @@
   "_generado": {
     "modelo": "openai:gpt-4o-mini",
     "schema": 1,
-    "hash_texto": "sha256:5eb6976d0aaceee0",
+    "hash_texto": "sha256:b263c214696eb95d",
     "advertencia": "Contenido generado por IA como AYUDA DE RECUPERACIÓN. No es texto oficial ni fuente de cita; la verdad está en el archivo de texto del artículo."
   },
-  "denominacion_comun": "Administración de recursos públicos",
+  "denominacion_comun": "Manejo de recursos públicos",
   "temas": [
+    "administración de recursos",
     "eficiencia",
     "transparencia",
-    "honradez",
-    "licitaciones",
-    "responsabilidad",
-    "evaluación de recursos",
-    "imparcialidad",
-    "propaganda institucional"
+    "contratación pública",
+    "responsabilidad de servidores públicos",
+    "propaganda institucional",
+    "evaluación de gastos"
   ],
   "terminos_coloquiales": [
-    "cómo se manejan los recursos",
-    "control de gasto público",
-    "licitaciones públicas",
-    "responsabilidad de funcionarios",
+    "manejo de dinero público",
+    "gastos del gobierno",
+    "licencias públicas",
+    "control de gastos",
+    "evaluación de presupuesto",
     "propaganda del gobierno"
   ],
-  "resumen": "El artículo establece cómo deben administrarse los recursos económicos del gobierno con transparencia y eficacia, asegurando que se utilicen de manera responsable y sin duplicidades. También regula las licitaciones para asegurar las mejores condiciones en las contrataciones públicas.",
+  "resumen": "Este artículo establece cómo deben manejarse los recursos económicos públicos en México, asegurando que se administre con eficiencia y transparencia. También señala las responsabilidades de los servidores públicos y las reglas para la contratación de obras y servicios.",
   "preguntas_ejemplo": [
-    "¿Cómo se asegura que el dinero público se use bien?",
-    "¿Qué es una licitación pública y cómo funciona?",
-    "¿Cuáles son mis derechos sobre la transparencia del gasto público?",
-    "¿Los funcionarios pueden hacer propaganda personal con recursos del gobierno?",
-    "¿Qué pasa si un servidor público no cumple con la ley en el uso de recursos?"
+    "¿Cómo se deben manejar los recursos del gobierno?",
+    "¿Qué obligaciones tienen los servidores públicos en el uso del dinero público?",
+    "¿Qué es una licitación pública y cómo se realiza?",
+    "¿Qué tipo de propaganda puede hacer el gobierno?",
+    "¿Cómo se evalúan los gastos del gobierno?"
   ]
 }

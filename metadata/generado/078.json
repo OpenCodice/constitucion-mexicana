@@ -4,31 +4,29 @@
   "_generado": {
     "modelo": "openai:gpt-4o-mini",
     "schema": 1,
-    "hash_texto": "sha256:8e8a3517aa13491a",
+    "hash_texto": "sha256:980f3233f1e952e2",
     "advertencia": "Contenido generado por IA como AYUDA DE RECUPERACIÓN. No es texto oficial ni fuente de cita; la verdad está en el archivo de texto del artículo."
   },
-  "denominacion_comun": "Comisión Permanente del Congreso",
+  "denominacion_comun": "Comisión Permanente",
   "temas": [
-    "Composición",
-    "Atribuciones",
-    "Protestas",
-    "Convocatorias",
-    "Licencias",
-    "Ratificaciones"
+    "Congreso de la Unión",
+    "Presidencia de la República",
+    "licencias",
+    "nombramientos"
   ],
   "terminos_coloquiales": [
-    "congreso en receso",
-    "comisión permanente",
-    "quién manda en el congreso",
-    "licencias del presidente",
-    "ratificación de embajadores"
+    "parlamento en receso",
+    "comisión del Congreso",
+    "decisiones del gobierno",
+    "sesiones extraordinarias"
   ],
-  "resumen": "El artículo establece la existencia de una Comisión Permanente durante los recesos del Congreso, que tiene diversas atribuciones como recibir protestas del presidente, resolver asuntos legislativos y convocar a sesiones extraordinarias. También se encarga de ratificar ciertos nombramientos del presidente y de conceder licencias a legisladores.",
+  "resumen": "El artículo habla sobre la Comisión Permanente del Congreso de la Unión, que opera durante los recesos parlamentarios. Esta comisión tiene diversas funciones como recibir protestas de la presidencia, resolver asuntos legislativos y ratificar nombramientos del presidente.",
   "preguntas_ejemplo": [
-    "¿Qué hace la Comisión Permanente cuando el Congreso está en receso?",
-    "¿Quiénes forman parte de la Comisión Permanente?",
-    "¿Cómo se ratifican los nombramientos de embajadas?",
-    "¿Qué pasa si se necesita una sesión extraordinaria?",
-    "¿Se puede dar licencia a un legislador?"
+    "¿Qué hace la Comisión Permanente durante los recesos del Congreso?",
+    "¿Quién nombra a los integrantes de la Comisión Permanente?",
+    "¿Cuáles son las funciones de la Comisión Permanente?",
+    "¿Cómo se convoca al Congreso a sesiones extraordinarias?",
+    "¿Qué tipo de licencias puede conceder la Comisión Permanente?",
+    "¿A quién ratifica la Comisión Permanente?"
   ]
 }

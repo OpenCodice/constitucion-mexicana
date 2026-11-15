@@ -4,33 +4,29 @@
   "_generado": {
     "modelo": "openai:gpt-4o-mini",
     "schema": 1,
-    "hash_texto": "sha256:c81c682eec54a60a",
+    "hash_texto": "sha256:b221922d947b1f7b",
     "advertencia": "Contenido generado por IA como AYUDA DE RECUPERACIÓN. No es texto oficial ni fuente de cita; la verdad está en el archivo de texto del artículo."
   },
-  "denominacion_comun": "Poderes de las Cámaras",
+  "denominacion_comun": "Poder Legislativo",
   "temas": [
     "resoluciones económicas",
     "comunicaciones",
     "nombramientos",
-    "convocatorias",
-    "elecciones extraordinarias",
-    "vacantes",
-    "reglamento interior"
+    "convocatorias"
   ],
   "terminos_coloquiales": [
-    "decisiones del Congreso",
-    "comunicarse con el Ejecutivo",
-    "nombrar personal",
-    "elecciones rápidas",
-    "cubrir vacantes",
-    "cómo funcionan las Cámaras"
+    "qué puede hacer el Congreso",
+    "funciones de las Cámaras",
+    "elecciones extraordinarias",
+    "vacantes en el Congreso"
   ],
-  "resumen": "El artículo describe las facultades que cada Cámara del Congreso tiene para actuar de manera independiente en temas económicos, nombramientos, comunicaciones y elecciones extraordinarias para cubrir vacantes. También establece un procedimiento para convocar elecciones en caso de que haya vacantes entre sus miembros.",
+  "resumen": "El artículo establece que cada Cámara del Congreso puede tomar decisiones sobre su funcionamiento sin que la otra Cámara intervenga. También les permite comunicarse con el Ejecutivo y hacer nombramientos de personal. Además, regula cómo deben convocar elecciones extraordinarias para cubrir vacantes de miembros.",
   "preguntas_ejemplo": [
-    "¿Qué puede hacer cada Cámara sin la otra?",
-    "¿Cómo manejan las elecciones extraordinarias?",
-    "¿Qué poderes tienen las Cámaras del Congreso?",
-    "¿Cómo se comunican las Cámaras con el Ejecutivo?",
-    "¿Qué pasa si hay una vacante en el Congreso?"
+    "¿Qué hace el Congreso si hay una vacante?",
+    "¿Puede una Cámara tomar decisiones sin la otra?",
+    "¿Cómo se nombran a los empleados del Congreso?",
+    "¿Qué tipo de resoluciones pueden tomar las Cámaras?",
+    "¿Cómo se comunican las Cámaras entre sí?",
+    "¿Qué sucede con las elecciones extraordinarias?"
   ]
 }

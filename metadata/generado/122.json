@@ -4,38 +4,37 @@
   "_generado": {
     "modelo": "openai:gpt-4o-mini",
     "schema": 1,
-    "hash_texto": "sha256:bff3680831fcd266",
+    "hash_texto": "sha256:a8546319b82c29be",
     "advertencia": "Contenido generado por IA como AYUDA DE RECUPERACIÓN. No es texto oficial ni fuente de cita; la verdad está en el archivo de texto del artículo."
   },
   "denominacion_comun": "Gobierno de la Ciudad de México",
   "temas": [
-    "autonomía",
-    "gobierno republicano",
-    "poderes locales",
-    "Legislatura",
-    "presupuesto",
-    "Alcaldías",
+    "Autonomía",
+    "Poder Legislativo",
+    "Poder Ejecutivo",
     "Poder Judicial",
-    "funcionarios públicos",
-    "organismos autónomos"
+    "Alcaldías",
+    "Presupuesto",
+    "Fiscalización",
+    "Derechos humanos",
+    "Transparencia",
+    "Procuración de justicia"
   ],
   "terminos_coloquiales": [
-    "gobierno de la ciudad",
-    "quién maneja la ciudad",
-    "poderes de la ciudad",
-    "cómo se elige al jefe de gobierno",
-    "presupuesto de la ciudad",
-    "alcaldías",
-    "leyes de la ciudad",
-    "organismos autónomos"
+    "Cómo se gobierna la Ciudad de México",
+    "Estructura del gobierno local",
+    "Legisladores de la Ciudad",
+    "Jefe de Gobierno",
+    "Alcaldes de la CDMX",
+    "Qué hace el Poder Judicial en la CDMX",
+    "Cómo funcionan las Alcaldías"
   ],
-  "resumen": "El artículo 122 establece que la Ciudad de México tiene su propio gobierno y autonomía. Define cómo se estructuran sus poderes y funciones, además de regular las elecciones y presupuestos para asegurar su funcionamiento. También aborda la organización de las Alcaldías y el Poder Judicial de la ciudad.",
+  "resumen": "Este artículo establece cómo se organiza y gobierna la Ciudad de México, definiendo sus poderes Legislativo, Ejecutivo y Judicial, así como las funciones de las Alcaldías. También menciona la autonomía de la ciudad y su responsabilidad en la protección de los derechos humanos.",
   "preguntas_ejemplo": [
-    "¿Quién gobierna la Ciudad de México?",
-    "¿Cómo se eligen los alcaldes?",
-    "¿Qué poderes tiene la ciudad?",
-    "¿Cómo se maneja el presupuesto en la ciudad?",
-    "¿Qué es el Tribunal de Justicia Administrativa?",
-    "¿Qué requisitos deben tener los funcionarios públicos en la ciudad?"
+    "¿Cómo se elige al Jefe de Gobierno de la Ciudad de México?",
+    "¿Qué poderes tiene la Ciudad de México?",
+    "¿Cómo se organizan las Alcaldías?",
+    "¿Qué es la Legislatura de la Ciudad de México?",
+    "¿Cuáles son las funciones del Poder Judicial en la CDMX?"
   ]
 }

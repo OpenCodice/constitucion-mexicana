@@ -4,31 +4,30 @@
   "_generado": {
     "modelo": "openai:gpt-4o-mini",
     "schema": 1,
-    "hash_texto": "sha256:4132b1200e99bd4f",
+    "hash_texto": "sha256:e5432dded7683dd9",
     "advertencia": "Contenido generado por IA como AYUDA DE RECUPERACIÓN. No es texto oficial ni fuente de cita; la verdad está en el archivo de texto del artículo."
   },
   "denominacion_comun": "División de Poderes",
   "temas": [
     "Supremo Poder",
-    "Poder Legislativo",
-    "Poder Ejecutivo",
-    "Poder Judicial",
-    "Facultades extraordinarias",
-    "Separación de poderes"
+    "Legislativo",
+    "Ejecutivo",
+    "Judicial",
+    "Facultades extraordinarias"
   ],
   "terminos_coloquiales": [
     "poderes del gobierno",
-    "quién manda en el país",
-    "división del gobierno",
-    "responsabilidades del gobierno",
-    "quién hace las leyes"
+    "separación de poderes",
+    "quién hace las leyes",
+    "quién manda",
+    "funciones del gobierno"
   ],
-  "resumen": "El artículo establece que el poder del gobierno mexicano se divide en tres ramas: el Legislativo, el Ejecutivo y el Judicial. No se permite que una sola persona controle más de un poder, a excepción de casos específicos de facultades extraordinarias para el Ejecutivo.",
+  "resumen": "El poder de la Federación se divide en tres partes: el Legislativo, el Ejecutivo y el Judicial. No se pueden juntar estos poderes en una sola persona, aunque hay excepciones para el Ejecutivo en situaciones especiales.",
   "preguntas_ejemplo": [
-    "¿Cómo se organizan los poderes del gobierno en México?",
-    "¿Quién puede reunirse en el poder ejecutivo?",
-    "¿Qué son las facultades extraordinarias?",
+    "¿Qué son los poderes del gobierno?",
+    "¿Cómo se dividen las funciones del gobierno?",
+    "¿Quién puede hacer las leyes?",
     "¿Qué pasa si un poder se une a otro?",
-    "¿Cuáles son los tres poderes del gobierno?"
+    "¿Qué son las facultades extraordinarias?"
   ]
 }
