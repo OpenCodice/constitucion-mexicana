@@ -1,6 +1,6 @@
 {
   "fuente": "Diario Oficial de la Federación — CPEUM, H. Cámara de Diputados",
-  "version": "2026-06-02",
+  "version": "2026-10-07",
   "articulos": [
     {
       "clave": "001",
@@ -1566,8 +1566,8 @@
       "etiqueta": "Artículo 82.",
       "titulo": "Título Tercero",
       "capitulo": "Capítulo III",
-      "ultima_reforma": "2025-04-01",
-      "num_reformas": 10,
+      "ultima_reforma": "2026-10-07",
+      "num_reformas": 11,
       "reformas": [
         "1927-01-22",
         "1943-01-08",
@@ -1578,7 +1578,8 @@
         "2014-02-10",
         "2016-01-29",
         "2024-09-30",
-        "2025-04-01"
+        "2025-04-01",
+        "2026-10-07"
       ],
       "archivo": "articulos/082.md"
     },
@@ -2262,8 +2263,8 @@
       "etiqueta": "Artículo 116.",
       "titulo": "Título Quinto",
       "capitulo": "",
-      "ultima_reforma": "2026-06-02",
-      "num_reformas": 21,
+      "ultima_reforma": "2026-10-07",
+      "num_reformas": 22,
       "reformas": [
         "1987-03-17",
         "1994-12-31",
@@ -2285,7 +2286,8 @@
         "2024-12-20",
         "2025-04-01",
         "2026-04-23",
-        "2026-06-02"
+        "2026-06-02",
+        "2026-10-07"
       ],
       "archivo": "articulos/116.md"
     },
@@ -2375,8 +2377,8 @@
       "etiqueta": "Artículo 122.",
       "titulo": "Título Quinto",
       "capitulo": "",
-      "ultima_reforma": "2026-06-02",
-      "num_reformas": 20,
+      "ultima_reforma": "2026-10-07",
+      "num_reformas": 21,
       "reformas": [
         "1993-10-25",
         "1994-12-31",
@@ -2397,7 +2399,8 @@
         "2024-09-15",
         "2024-11-15",
         "2025-04-01",
-        "2026-06-02"
+        "2026-06-02",
+        "2026-10-07"
       ],
       "archivo": "articulos/122.md"
     },

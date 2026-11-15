@@ -97,12 +97,30 @@
       "apartado": "",
       "fraccion": "",
       "ruta": "Artículo 116. › párrafo 3",
-      "texto": "Sólo podrá ser gobernador constitucional de un Estado un ciudadano mexicano por nacimiento y nativo de él, o con residencia efectiva no menor de cinco años inmediatamente anteriores al día de los comicios, y tener 30 años cumplidos el día de la elección, o menos, si así lo establece la Constitución Política de la Entidad Federativa.",
+      "texto": "Sólo podrá ser gobernador o gobernadora constitucional de un Estado un ciudadano o ciudadana mexicana por nacimiento que no tenga ni adquiera otra nacionalidad y, en caso de tenerla renunciar a ella previo a solicitar su registro como candidato o candidata en los términos que establezca la ley, así como ser nativo o nativa de dicho Estado, o con residencia efectiva no menor de cinco años inmediatamente anteriores al día de los comicios, y tener 30 años cumplidos el día de la elección, o menos, si así lo establece la Constitución Política de la Entidad Federativa.",
       "reformas": [
         {
-          "nota": "Párrafo reformado DOF 26-09-2008",
+          "nota": "Párrafo reformado DOF 26-09-2008, 07-10-2026",
           "fechas": [
-            "2008-09-26"
+            "2008-09-26",
+            "2026-10-07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "116.p4",
+      "tipo": "parrafo",
+      "marca": "",
+      "apartado": "",
+      "fraccion": "",
+      "ruta": "Artículo 116. › párrafo 4",
+      "texto": "Quien ejerza el cargo no podrá adquirir ni solicitar otra nacionalidad, ni invocar ante autoridad extranjera una nacionalidad distinta de la mexicana. Quedan comprendidos en esta prohibición, entre otros supuestos, el uso de pasaporte o documento de identidad expedido por un Estado extranjero, el ejercicio de los derechos políticos inherentes a la ciudadanía ante este y el acogerse a su protección diplomática. La contravención de esta disposición se sancionará en los términos del Título Cuarto de esta Constitución, y de las constituciones de las entidades federativas.",
+      "reformas": [
+        {
+          "nota": "Párrafo adicionado DOF 07-10-2026",
+          "fechas": [
+            "2026-10-07"
           ]
         },
         {
@@ -623,12 +641,12 @@
       ]
     },
     {
-      "id": "116.p4",
+      "id": "116.p5",
       "tipo": "parrafo",
       "marca": "",
       "apartado": "",
       "fraccion": "",
-      "ruta": "Artículo 116. › párrafo 4",
+      "ruta": "Artículo 116. › párrafo 5",
       "texto": "En el ámbito de los Poderes Judiciales de los Estados, no podrán crearse ni mantenerse en operación fondos, fideicomisos, mandatos o contratos análogos que no estén previstos en la ley.",
       "reformas": [
         {
