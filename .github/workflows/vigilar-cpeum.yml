@@ -126,17 +126,6 @@ jobs:
             fi
           fi
 
-      - name: Enriquecer artículos cambiados (opcional, best-effort)
-        # Solo si hay reforma y está configurado el secret OPENAI_API_KEY.
-        # continue-on-error: un fallo del LLM no debe tumbar el PR del texto.
-        if: steps.cambios.outputs.hay_cambios == 'true' && env.OPENAI_API_KEY != ''
-        continue-on-error: true
-        run: |
-          pip install openai
-          cd /tmp/extractor
-          PYTHONPATH=/tmp/extractor python -m extractor enriquecer \
-            --pdf /tmp/CPEUM.pdf --out "$GITHUB_WORKSPACE" --proveedor openai
-
       - name: Actualizar el PDF fuente (solo si hubo reforma)
         # Va en el mismo commit que las coordenadas regeneradas → PDF y datos
         # quedan sincronizados atómicamente (lo consume constitucion-web → R2).

@@ -4,12 +4,6 @@ Texto vigente de la **Constitución Política de los Estados Unidos Mexicanos**,
 un archivo por artículo, versionado en git para dejar un **rastro auditable de
 las reformas**.
 
-> ### 🔎 ¿Quieres hacer preguntas en lenguaje natural?
-> Entra a **[constitucion.app](https://constitucion.app)** — pregunta como hablas
-> (“¿puedo tener doble nacionalidad?”, “¿qué dice sobre la libertad de
-> expresión?”) y obtén respuestas **con la cita exacta** al artículo y la página
-> del PDF oficial.
-
 > Repo de **datos**. La lógica que genera estos archivos vive en
 > [`constitucion-extractor`](https://github.com/OpenCodice/constitucion-extractor). Aquí no hay código:
 > cada commit corresponde a una versión del texto (idealmente, a una reforma
