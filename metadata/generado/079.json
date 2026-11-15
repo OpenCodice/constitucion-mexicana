@@ -4,31 +4,33 @@
   "_generado": {
     "modelo": "openai:gpt-4o-mini",
     "schema": 1,
-    "hash_texto": "sha256:f41c0c95c50084fe",
+    "hash_texto": "sha256:09a76eb78258b285",
     "advertencia": "Contenido generado por IA como AYUDA DE RECUPERACIÓN. No es texto oficial ni fuente de cita; la verdad está en el archivo de texto del artículo."
   },
   "denominacion_comun": "Auditoría Superior de la Federación",
   "temas": [
     "autonomía",
     "fiscalización",
-    "informes de auditoría",
+    "recursos públicos",
+    "informes",
     "sanciones",
     "responsabilidades",
-    "recursos federales"
+    "auditorías",
+    "justificaciones"
   ],
   "terminos_coloquiales": [
-    "auditoría federal",
-    "chequeo de cuentas",
-    "revisión de gastos",
-    "fiscalización del Gobierno",
-    "informe de auditoría"
+    "auditoría del gobierno",
+    "fiscalización de fondos",
+    "informes de auditoría",
+    "control de recursos",
+    "sanciones por malos manejos"
   ],
-  "resumen": "Este artículo establece la autonomía de la Auditoría Superior de la Federación para fiscalizar el uso de recursos públicos y determinar sus propias decisiones organizativas. Además, señala cómo debe llevar a cabo la fiscalización y la entrega de informes sobre su desempeño a la Cámara de Diputados.",
+  "resumen": "La Auditoría Superior de la Federación es un organismo autónomo que se encarga de fiscalizar el manejo de recursos públicos en México. Tiene la tarea de realizar auditorías, emitir informes y supervisar el uso de fondos por parte de diferentes entidades gubernamentales.",
   "preguntas_ejemplo": [
     "¿Qué hace la Auditoría Superior de la Federación?",
-    "¿Cómo se fiscalizan los recursos federales?",
-    "¿Qué informes entrega la Auditoría a la Cámara de Diputados?",
-    "¿Qué pasa si no cumplen con las auditorías?",
-    "¿Quién designa al titular de la Auditoría Superior?"
+    "¿Cómo se fiscalizan los recursos públicos en México?",
+    "¿Qué sanciones hay por mal manejo de fondos?",
+    "¿Cuándo se presentan los informes de auditoría?",
+    "¿Quién nombra al titular de la Auditoría Superior?"
   ]
 }

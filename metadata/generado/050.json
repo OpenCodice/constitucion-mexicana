@@ -4,30 +4,30 @@
   "_generado": {
     "modelo": "openai:gpt-4o-mini",
     "schema": 1,
-    "hash_texto": "sha256:283a5a9984c94381",
+    "hash_texto": "sha256:f479d17c12ed2f1d",
     "advertencia": "Contenido generado por IA como AYUDA DE RECUPERACIÓN. No es texto oficial ni fuente de cita; la verdad está en el archivo de texto del artículo."
   },
-  "denominacion_comun": "Congreso de la Unión",
+  "denominacion_comun": "Poder Legislativo",
   "temas": [
-    "poder legislativo",
     "Congreso",
     "Cámaras",
-    "diputados",
-    "senadores"
+    "Diputados",
+    "Senadores",
+    "Poderes del Estado"
   ],
   "terminos_coloquiales": [
-    "quiénes son los diputados",
-    "quiénes son los senadores",
     "cómo funciona el Congreso",
-    "qué hace el Congreso",
-    "elección de diputados y senadores"
+    "qué son los diputados",
+    "diferencia entre diputados y senadores",
+    "quién hace las leyes",
+    "estructura del Congreso"
   ],
-  "resumen": "El poder legislativo de México está compuesto por un Congreso que tiene dos Cámaras: una de diputados y otra de senadores. Esto establece cómo se organiza el Congreso.",
+  "resumen": "Este artículo habla sobre el poder legislativo en México, que está compuesto por un Congreso general dividido en dos Cámaras: los diputados y los senadores.",
   "preguntas_ejemplo": [
-    "¿Qué es el Congreso de la Unión?",
-    "¿Cuántas Cámaras tiene el Congreso?",
-    "¿Cuál es la función de los diputados?",
-    "¿Qué hacen los senadores?",
-    "¿Cómo se eligen los miembros del Congreso?"
+    "¿Qué es el Congreso de México?",
+    "¿Quiénes son los miembros del Congreso?",
+    "¿Cuál es la función de los diputados y senadores?",
+    "¿Cómo se organiza el poder legislativo en México?",
+    "¿Qué representa cada Cámara en el Congreso?"
   ]
 }

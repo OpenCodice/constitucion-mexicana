@@ -4,39 +4,39 @@
   "_generado": {
     "modelo": "openai:gpt-4o-mini",
     "schema": 1,
-    "hash_texto": "sha256:d7e540e460ce3a35",
+    "hash_texto": "sha256:7cfb8a1a277662cb",
     "advertencia": "Contenido generado por IA como AYUDA DE RECUPERACIÓN. No es texto oficial ni fuente de cita; la verdad está en el archivo de texto del artículo."
   },
   "denominacion_comun": "Derechos Laborales",
   "temas": [
     "trabajo digno",
-    "salario mínimo",
     "jornada laboral",
+    "salario mínimo",
+    "descanso laboral",
     "vacaciones",
-    "descansos",
+    "derecho a huelga",
     "seguridad social",
-    "huelga",
+    "indemnización",
     "sindicatos",
-    "capacitación"
+    "capacitacion laboral"
   ],
   "terminos_coloquiales": [
-    "derechos de los trabajadores",
+    "derechos del trabajador",
+    "tiempo de descanso",
     "salario justo",
-    "horas de trabajo",
     "vacaciones pagadas",
-    "dia de descanso",
-    "seguro social",
-    "paros y huelgas",
-    "sindicatos",
-    "cursos de capacitación"
+    "huelgas",
+    "conflictos laborales",
+    "seguridad en el trabajo",
+    "trabajo mal pagado"
   ],
-  "resumen": "El Artículo 123 garantiza a todas las personas el derecho a un trabajo digno, justo y seguro, regulando aspectos como la jornada laboral, el salario mínimo y otros derechos laborales. También establece la protección de ciertas condiciones laborales, así como la posibilidad de organizarse en sindicatos y hacer huelgas.",
+  "resumen": "Este artículo garantiza a todas las personas el derecho a un trabajo digno y establece las normas sobre las jornadas laborales, salarios mínimos, descansos, vacaciones, y derechos de los trabajadores. También regula el acceso a la seguridad social y las condiciones en que los trabajadores pueden organizarse y llevar a cabo huelgas.",
   "preguntas_ejemplo": [
-    "¿Qué derechos tengo como trabajador?",
-    "¿Cuál es el salario mínimo que debo recibir?",
-    "¿Cuántas horas debo trabajar a la semana?",
-    "¿Tengo derecho a vacaciones?",
-    "¿Qué debo hacer si no me pagan mi salario?",
-    "¿Puedo hacer huelga si no estoy de acuerdo con mi trabajo?"
+    "¿Cuánto tiempo de descanso me corresponde?",
+    "¿Qué derechos tengo si me despiden sin causa?",
+    "¿Qué debo hacer si mi salario es muy bajo?",
+    "¿Cómo puedo formar un sindicato?",
+    "¿Qué beneficios me da la seguridad social?",
+    "¿Qué sucede si no me pagan horas extras?"
   ]
 }

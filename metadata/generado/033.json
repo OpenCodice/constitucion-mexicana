@@ -4,31 +4,30 @@
   "_generado": {
     "modelo": "openai:gpt-4o-mini",
     "schema": 1,
-    "hash_texto": "sha256:07546022d6ab10fd",
+    "hash_texto": "sha256:b2c5d4870fdad7e6",
     "advertencia": "Contenido generado por IA como AYUDA DE RECUPERACIÓN. No es texto oficial ni fuente de cita; la verdad está en el archivo de texto del artículo."
   },
   "denominacion_comun": "Extranjería",
   "temas": [
     "derechos humanos",
-    "garantías",
     "expulsión",
-    "asuntos políticos",
     "detención",
-    "procedimiento administrativo"
+    "asuntos políticos",
+    "garantías"
   ],
   "terminos_coloquiales": [
+    "migrantes",
     "extranjeros",
-    "expulsión de extranjeros",
-    "derechos de extranjeros",
-    "no meterse en política",
-    "procedimientos para extranjeros"
+    "derechos de los extranjeros",
+    "expulsiones",
+    "política para extranjeros"
   ],
-  "resumen": "El artículo establece que las personas extranjeras tienen derechos humanos reconocidos por la Constitución, pero no pueden participar en asuntos políticos. Además, el Ejecutivo puede expulsarlas siguiendo un proceso legal.",
+  "resumen": "El artículo establece que las personas extranjeras tienen derechos humanos en México, pero el gobierno puede expulsarlas. Además, se prohíbe que los extranjeros se involucren en la política del país.",
   "preguntas_ejemplo": [
     "¿Qué derechos tienen los extranjeros en México?",
-    "¿Puede el gobierno expulsar a un extranjero?",
-    "¿Los extranjeros pueden involucrarse en la política mexicana?",
-    "¿Cómo se regula la expulsión de extranjeros?",
-    "¿Qué pasa si un extranjero comete un delito en México?"
+    "¿Pueden los extranjeros ser expulsados del país?",
+    "¿Los extranjeros pueden participar en la política mexicana?",
+    "¿Cuál es el proceso para expulsar a un extranjero?",
+    "¿Qué significa ser considerado extranjero en México?"
   ]
 }

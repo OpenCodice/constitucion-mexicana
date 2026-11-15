@@ -4,34 +4,35 @@
   "_generado": {
     "modelo": "openai:gpt-4o-mini",
     "schema": 1,
-    "hash_texto": "sha256:56642bcdbd930eb8",
+    "hash_texto": "sha256:20a4e78fb8953dd7",
     "advertencia": "Contenido generado por IA como AYUDA DE RECUPERACIÓN. No es texto oficial ni fuente de cita; la verdad está en el archivo de texto del artículo."
   },
   "denominacion_comun": "Suspensión de derechos ciudadanos",
   "temas": [
+    "derechos ciudadanos",
     "suspensión de derechos",
     "proceso criminal",
     "pena corporal",
-    "vagancia",
-    "deudores alimentarios",
+    "deuda alimentaria",
     "violencia de género",
-    "justicia"
+    "vagancia",
+    "ebriedad"
   ],
   "terminos_coloquiales": [
     "perder derechos",
-    "suspenden mis derechos",
-    "no puedo votar",
+    "no poder votar",
+    "sanciones",
     "problemas legales",
-    "ser deudor alimentario",
-    "ser encarcelado"
+    "ser un prófugo",
+    "deuda de manutención",
+    "mala conducta"
   ],
-  "resumen": "El artículo establece las condiciones bajo las cuales se pueden suspender los derechos de los ciudadanos, como estar en un proceso criminal o ser declarado deudor alimentario. Estas suspensiones pueden afectar la capacidad de candidaturas y empleos públicos.",
+  "resumen": "El artículo establece cuándo se suspenden los derechos de los ciudadanos, como cuando no cumplen obligaciones legales, están en proceso criminal, o tienen sentencias por ciertos delitos. Quienes pierden estos derechos no pueden ser candidatos a elecciones ni ocupar puestos en el servicio público.",
   "preguntas_ejemplo": [
     "¿Cuándo se me pueden suspender mis derechos como ciudadano?",
-    "¿Qué pasa si estoy en un proceso penal?",
-    "¿Cómo afecta ser deudor alimentario a mis derechos?",
-    "¿Puedo votar si tengo una pena corporal?",
-    "¿Qué delitos provocan la suspensión de mis derechos?",
-    "¿Cuánto tiempo pueden durar suspendidos mis derechos?"
+    "¿Qué resulta si tengo problemas legales?",
+    "¿Puede alguien que no cumple con la manutención votar?",
+    "¿Qué delitos causan la suspensión de mis derechos?",
+    "Si estoy en proceso penal, ¿puedo ser candidato a un puesto público?"
   ]
 }

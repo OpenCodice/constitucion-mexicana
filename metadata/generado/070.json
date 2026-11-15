@@ -4,32 +4,31 @@
   "_generado": {
     "modelo": "openai:gpt-4o-mini",
     "schema": 1,
-    "hash_texto": "sha256:e6731f9aceafcd13",
+    "hash_texto": "sha256:cb24c7db9106b0c5",
     "advertencia": "Contenido generado por IA como AYUDA DE RECUPERACIÓN. No es texto oficial ni fuente de cita; la verdad está en el archivo de texto del artículo."
   },
-  "denominacion_comun": "Resoluciones del Congreso",
+  "denominacion_comun": "Ley del Congreso",
   "temas": [
-    "ley",
-    "decreto",
-    "Ejecutivo",
-    "Cámara de Diputados",
-    "afiliación de partido",
-    "libre expresión",
-    "normativa interna"
+    "resoluciones del Congreso",
+    "leyes y decretos",
+    "estructura del Congreso",
+    "funcionamiento del Congreso",
+    "agrupación de diputados",
+    "expresión ideológica"
   ],
   "terminos_coloquiales": [
-    "decisiones del Congreso",
+    "lo que dice el Congreso",
     "cómo se hacen las leyes",
-    "cómo se comunican las leyes",
-    "organización de los diputados",
-    "leyes sin veto"
+    "reglas del Congreso",
+    "unión de diputados",
+    "ley de funcionamiento del Congreso"
   ],
-  "resumen": "El artículo habla sobre cómo las resoluciones del Congreso se convierten en leyes o decretos y cómo se comunican al Ejecutivo. También menciona la ley que regulará la organización de los diputados según su partido y que esta ley no necesita la aprobación del Ejecutivo para ser válida.",
+  "resumen": "El artículo establece que todas las decisiones del Congreso son leyes o decretos, que se comunican al Ejecutivo. También menciona que habrá una ley para regular cómo se organiza y funciona el Congreso, asegurando que los diputados se puedan agrupar según su partido político para expresar sus ideas libremente.",
   "preguntas_ejemplo": [
-    "¿Cómo se convierte una decisión del Congreso en ley?",
-    "¿Quién comunica las leyes al Ejecutivo?",
-    "¿Qué dice la ley sobre la agrupación de los diputados?",
-    "¿Las leyes del Congreso necesitan aprobación del Presidente?",
-    "¿Cómo se organizan los diputados por partido?"
+    "¿Cómo se convierten en leyes las decisiones del Congreso?",
+    "¿Qué regula la ley sobre el funcionamiento del Congreso?",
+    "¿Cómo se agrupan los diputados en la Cámara?",
+    "¿Las leyes del Congreso necesitan la aprobación del Presidente?",
+    "¿Qué dice el artículo sobre la expresión de partidos en el Congreso?"
   ]
 }

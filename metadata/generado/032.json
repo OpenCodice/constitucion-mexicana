@@ -4,30 +4,29 @@
   "_generado": {
     "modelo": "openai:gpt-4o-mini",
     "schema": 1,
-    "hash_texto": "sha256:0e9336ef3a0547a8",
+    "hash_texto": "sha256:08e8d57312a99a4f",
     "advertencia": "Contenido generado por IA como AYUDA DE RECUPERACIÓN. No es texto oficial ni fuente de cita; la verdad está en el archivo de texto del artículo."
   },
-  "denominacion_comun": "Nacionalidad y derechos",
+  "denominacion_comun": "Doble nacionalidad y derechos",
   "temas": [
     "doble nacionalidad",
-    "derechos políticos",
-    "Fuerzas Armadas",
-    "empleo público",
+    "derechos de los mexicanos",
+    "servicio militar",
+    "empleos públicos",
     "preferencia nacional"
   ],
   "terminos_coloquiales": [
-    "tener doble nacionalidad",
-    "ser mexicano",
-    "extranjeros en el ejército",
-    "empleos para mexicanos",
-    "derechos de los mexicanos"
+    "mexicanos con otra nacionalidad",
+    "dualidad de nacionalidad",
+    "cargos de gobierno",
+    "trabajos para mexicanos"
   ],
-  "resumen": "Este artículo trata sobre los derechos de los mexicanos que tienen otra nacionalidad y establece que solo los mexicanos por nacimiento pueden desempeñar ciertos cargos. También indica que en tiempo de paz, los extranjeros no pueden servir en las Fuerzas Armadas.",
+  "resumen": "El artículo habla sobre los derechos de los mexicanos que tienen otra nacionalidad y establece que ciertos cargos y funciones son solo para mexicanos por nacimiento. También dice que en tiempos de paz, los extranjeros no pueden servir en las fuerzas armadas y que los mexicanos tienen preferencia en empleos públicos.",
   "preguntas_ejemplo": [
-    "¿Un mexicano con doble nacionalidad puede ser funcionario?",
-    "¿Qué requisitos hay para pertenecer al ejército mexicano?",
-    "¿Los mexicanos tienen preferencia en el empleo público?",
-    "¿Puede un extranjero trabajar en la policía?",
-    "¿Qué pasa si tengo doble nacionalidad?"
+    "¿Puedo tener doble nacionalidad y ser funcionario?",
+    "¿Quiénes pueden servir en las fuerzas armadas?",
+    "¿Los mexicanos son preferidos en empleos del gobierno?",
+    "¿Qué derechos tienen los mexicanos con otra nacionalidad?",
+    "¿Existen restricciones para extranjeros en el ejército?"
   ]
 }

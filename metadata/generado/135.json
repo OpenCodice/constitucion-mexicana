@@ -4,32 +4,28 @@
   "_generado": {
     "modelo": "openai:gpt-4o-mini",
     "schema": 1,
-    "hash_texto": "sha256:df8eae8eccc0246d",
+    "hash_texto": "sha256:8abea8d926b7abea",
     "advertencia": "Contenido generado por IA como AYUDA DE RECUPERACIÓN. No es texto oficial ni fuente de cita; la verdad está en el archivo de texto del artículo."
   },
   "denominacion_comun": "Reformas a la Constitución",
   "temas": [
-    "adiciones",
-    "reformas",
-    "Congreso de la Unión",
-    "legislaturas estatales",
-    "voto",
-    "mayoría",
-    "inviolabilidad"
+    "modificación constitucional",
+    "votación del Congreso",
+    "aprobación estatal",
+    "procedimiento legislativo"
   ],
   "terminos_coloquiales": [
     "cambios a la Constitución",
-    "modificaciones constitucionales",
-    "como se cambia la Constitución",
-    "aprobación de reformas",
-    "votación en el Congreso"
+    "reformas",
+    "modificaciones legales",
+    "nueva Constitución"
   ],
-  "resumen": "Este artículo establece cómo se puede modificar la Constitución. Para que una reforma sea válida, debe ser aprobada por el Congreso con una mayoría específica y también por las legislaturas de los Estados.",
+  "resumen": "Este artículo establece que la Constitución puede ser cambiada o añadida. Para que esos cambios sean válidos, debe haber un voto mayoritario en el Congreso y la aprobación de la mayoría de los estados y de la Ciudad de México.",
   "preguntas_ejemplo": [
-    "¿Cómo se puede cambiar la Constitución?",
-    "¿Qué se necesita para reformar la Constitución?",
-    "¿Quién aprueba las reformas constitucionales?",
-    "¿Qué significa que la Constitución sea inviolable?",
-    "¿Cuántas votaciones se requieren para modificar la Constitución?"
+    "¿Cómo se puede modificar la Constitución?",
+    "¿Qué se necesita para que una reforma sea válida?",
+    "¿Quién aprueba los cambios a la Constitución?",
+    "¿Cuántas votaciones se requieren para reformar la Constitución?",
+    "¿Qué dice la Constitución sobre sus propias reformas?"
   ]
 }

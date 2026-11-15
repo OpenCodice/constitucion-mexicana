@@ -4,34 +4,31 @@
   "_generado": {
     "modelo": "openai:gpt-4o-mini",
     "schema": 1,
-    "hash_texto": "sha256:6dab78460d1e28f9",
+    "hash_texto": "sha256:6988bbad3239ec77",
     "advertencia": "Contenido generado por IA como AYUDA DE RECUPERACIÓN. No es texto oficial ni fuente de cita; la verdad está en el archivo de texto del artículo."
   },
-  "denominacion_comun": "Rendición de cuentas de Secretarios",
+  "denominacion_comun": "Responsabilidad de Secretarios de Estado",
   "temas": [
-    "transparencia",
-    "responsabilidad",
-    "informes gubernamentales",
-    "comisiones de investigación",
-    "poderes del Congreso",
-    "interpelaciones",
-    "dependencias del gobierno"
+    "Informe al Congreso",
+    "Sesiones ordinarias",
+    "Comisiones de investigación",
+    "Transparencia gubernamental",
+    "Interpelaciones",
+    "Documentación oficial"
   ],
   "terminos_coloquiales": [
-    "control del gobierno",
-    "rendir cuentas",
-    "investigaciones del Congreso",
-    "que expliquen su trabajo",
-    "informes de secretarios",
-    "preguntas al gabinete"
+    "qué deben hacer los Secretarios",
+    "cómo informa el gobierno al Congreso",
+    "quién puede convocar a los Secretarios",
+    "responsabilidades de los funcionarios",
+    "reportes al Congreso"
   ],
-  "resumen": "El artículo establece que los Secretarios del Despacho deben informar al Congreso sobre sus actividades. Las Cámaras pueden convocar a estos funcionarios y crear comisiones para investigar su trabajo y solicitar información.",
+  "resumen": "El Artículo establece que los Secretarios del Despacho deben informar al Congreso sobre sus actividades. Las Cámaras pueden convocar a estos Secretarios para dar información y pueden investigar el funcionamiento de entidades gubernamentales.",
   "preguntas_ejemplo": [
-    "¿Cómo informa el gobierno al Congreso?",
-    "¿Qué puede hacer el Congreso con los Secretarios?",
-    "¿Cómo se realizan las investigaciones en el gobierno?",
-    "¿Qué pasa si los Secretarios no responden?",
-    "¿Cuándo debe responder un Secretario al Congreso?",
-    "¿Qué facultades tiene el Congreso sobre las entidades paraestatales?"
+    "¿Qué información deben dar los Secretarios al Congreso?",
+    "¿Quién puede convocar a los funcionarios del gobierno?",
+    "¿Cuál es el proceso para investigar entidades del gobierno?",
+    "¿Cuánto tiempo tienen los Secretarios para responder a preguntas del Congreso?",
+    "¿Qué pasa si los Secretarios no cumplen con su obligación de informar?"
   ]
 }
