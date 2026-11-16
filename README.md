@@ -119,3 +119,10 @@ título de cada commit distingue una **reforma** (cambió la ley) de una
 Diario Oficial de la Federación — CPEUM, H. Cámara de Diputados del H. Congreso
 de la Unión. Este repositorio es una reproducción para fines de consulta y
 seguimiento de cambios; el texto oficial es el publicado en el DOF.
+
+## Licencia
+
+[CC0 1.0](LICENSE): dominio público. Los textos legislativos no son objeto de
+derechos de autor (Ley Federal del Derecho de Autor, artículo 14, fracción
+VIII); con CC0, la compilación, la metadata y el historial también se pueden
+usar, copiar y redistribuir sin restricciones ni atribución.
