@@ -10,7 +10,12 @@ name: Vigilar reformas CPEUM
 on:
   schedule:
     - cron: '0 9 * * 1'        # cada lunes 09:00 UTC
-  workflow_dispatch: {}         # también disparo manual
+  workflow_dispatch:
+    inputs:
+      reintento:
+        description: 'Reintento automático tras una falla'
+        type: boolean
+        default: false
 
 permissions:
   contents: write               # crear la rama y commitear
@@ -120,7 +125,10 @@ jobs:
 
       - name: Abrir Pull Request
         id: pr
-        if: steps.cambios.outputs.hay_cambios == 'true'
+        # Solo se publica lo verificado. Lo que no pasó las compuertas no se
+        # publica: el texto vigente se queda como está y la siguiente vigilancia
+        # lo vuelve a intentar, con el agente reparando el extractor.
+        if: steps.cambios.outputs.hay_cambios == 'true' && steps.veredicto.outputs.ok == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
           # Con un PAT (secret PR_TOKEN) el PR nace atribuido a un usuario real,
@@ -132,29 +140,21 @@ jobs:
           title: '🏛️ Posible reforma a la CPEUM (detección automática)'
           body-path: /tmp/cuerpo.md
           commit-message: 'Actualización automática del texto vigente de la CPEUM'
-          draft: ${{ steps.veredicto.outputs.ok == 'false' }}
           labels: |
             reforma
             automatico
-            ${{ steps.veredicto.outputs.ok == 'false' && 'extraccion-sospechosa' || '' }}
-            ${{ steps.veredicto.outputs.ok == 'true' && 'verificado' || '' }}
+            verificado
             ${{ steps.agente.outputs.tipo == 'correccion' && 'correccion-extraccion' || '' }}
-          assignees: ${{ steps.veredicto.outputs.ok == 'false' && 'danielcardeenas' || '' }}
           delete-branch: true
 
-      - name: Sincronizar el estado de verificación del PR
-        if: steps.pr.outputs.pull-request-number != ''
-        env:
-          GH_TOKEN: ${{ secrets.PR_TOKEN || github.token }}
-          PR: ${{ steps.pr.outputs.pull-request-number }}
-          OK: ${{ steps.veredicto.outputs.ok }}
+      - name: Anotar lo que no se publicó
+        if: steps.cambios.outputs.hay_cambios == 'true' && steps.veredicto.outputs.ok != 'true'
         run: |
-          if [ "$OK" = "true" ]; then
-            gh pr edit "$PR" -R "$GITHUB_REPOSITORY" --remove-label extraccion-sospechosa || true
-            gh pr ready "$PR" -R "$GITHUB_REPOSITORY" || true
-          else
-            gh pr edit "$PR" -R "$GITHUB_REPOSITORY" --remove-label verificado || true
-          fi
+          {
+            echo "## Cambios no publicados"
+            echo "La extracción no pasó las compuertas; se conserva el texto vigente y la próxima vigilancia lo reintenta."
+            if [ -f /tmp/verificacion.md ]; then cat /tmp/verificacion.md; fi
+          } >> "$GITHUB_STEP_SUMMARY"
 
   salud:
     needs: vigilar
@@ -169,17 +169,23 @@ jobs:
       - name: Mantener activo el cron
         run: gh api -X PUT "repos/$GITHUB_REPOSITORY/actions/workflows/vigilar-cpeum.yml/enable"
 
-      - name: Abrir o actualizar un issue si falló
-        if: needs.vigilar.result == 'failure'
+      - name: Reintentar una vez si falló
+        # Casi todas las fallas son de red o de la fuente oficial: se reintenta
+        # solo, una vez. Si el reintento también falla, la siguiente vigilancia
+        # semanal lo vuelve a intentar.
+        if: (needs.vigilar.result == 'failure') && inputs.reintento != true
+        run: gh workflow run vigilar-cpeum.yml -R "$GITHUB_REPOSITORY" --ref main -f reintento=true
+
+      - name: Dejar constancia si también falló el reintento
+        if: (needs.vigilar.result == 'failure') && inputs.reintento == true
         run: |
           titulo="🚨 Falló: ${{ github.workflow }}"
           url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
           n=$(gh issue list -R "$GITHUB_REPOSITORY" --state open \
                 --search "in:title \"$titulo\"" --json number -q '.[0].number')
           if [ -n "$n" ]; then
-            gh issue comment "$n" -R "$GITHUB_REPOSITORY" --body "Volvió a fallar: $url"
+            gh issue comment "$n" -R "$GITHUB_REPOSITORY" --body "Volvió a fallar tras reintentar: $url"
           else
             gh issue create -R "$GITHUB_REPOSITORY" --title "$titulo" \
-              --assignee danielcardeenas \
-              --body "El workflow programado falló y necesita atención: $url"
+              --body "Falló dos veces seguidas; la vigilancia de la próxima semana lo reintenta: $url"
           fi
