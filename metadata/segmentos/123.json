@@ -2,7 +2,7 @@
   "clave": "123",
   "etiqueta": "Artículo 123.",
   "titulo": "Título Sexto",
-  "capitulo": "Capítulo IV",
+  "capitulo": "",
   "reformas_articulo": [],
   "bloques": [
     {
@@ -200,7 +200,7 @@
       "apartado": "A",
       "fraccion": "",
       "ruta": "Artículo 123. › Apartado A › Fracción V",
-      "texto": "V. Las mujeres durante el embarazo no realizarán trabajos que exijan un esfuerzo considerable y signifiquen un peligro para su salud en relación con la gestación;\n\ngozarán forzosamente de un descanso de seis semanas anteriores a la fecha fijada aproximadamente para el parto y seis semanas posteriores al mismo, debiendo percibir su salario íntegro y conservar su empleo y los derechos que hubieren adquirido por la relación de trabajo. En el período de lactancia tendrán dos descansos extraordinarios por día, de media hora cada uno para alimentar a sus hijos;",
+      "texto": "V. Las mujeres durante el embarazo no realizarán trabajos que exijan un esfuerzo considerable y signifiquen un peligro para su salud en relación con la gestación; gozarán forzosamente de un descanso de seis semanas anteriores a la fecha fijada aproximadamente para el parto y seis semanas posteriores al mismo, debiendo percibir su salario íntegro y conservar su empleo y los derechos que hubieren adquirido por la relación de trabajo. En el período de lactancia tendrán dos descansos extraordinarios por día, de media hora cada uno para alimentar a sus hijos;",
       "reformas": [
         {
           "nota": "Fracción reformada DOF 31-12-1974",
